@@ -1,0 +1,11 @@
+{% extends 'navbar.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <form action="" method="post" class="w-50 mt-5 shadow p-5">
+        {% csrf_token %}
+        {{form|crispy}}
+        <br>
+        <input type="submit" class="btn btn-success">
+    </form>
+{% endblock %}
